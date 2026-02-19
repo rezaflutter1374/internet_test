@@ -1,0 +1,44 @@
+2026-02-19T21:40:00Z [INFO] Start network forensic run: 20260219_164000
+2026-02-19T21:40:00Z [INFO] Output directory: /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000
+2026-02-19T21:40:00Z [INFO] Module: system
+2026-02-19T21:40:00Z [INFO] RUN: uname
+2026-02-19T21:40:00Z [INFO] RUN: sw_vers
+2026-02-19T21:40:00Z [INFO] RUN: sysctl hw
+2026-02-19T21:40:00Z [WARN] Command failed (1): sysctl hw (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/sysctl_hw.txt)
+2026-02-19T21:40:00Z [INFO] Module: network
+2026-02-19T21:40:00Z [INFO] RUN: ifconfig -a
+2026-02-19T21:40:00Z [INFO] RUN: netstat -rn
+2026-02-19T21:40:00Z [INFO] RUN: scutil --dns
+2026-02-19T21:40:00Z [WARN] Command failed (1): scutil --dns (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/scutil_dns.txt)
+2026-02-19T21:40:00Z [INFO] Module: dns
+2026-02-19T21:40:00Z [INFO] RUN: dig google.com @8.8.8.8
+2026-02-19T21:40:01Z [WARN] Command failed (10): dig google.com @8.8.8.8 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/dns_google_8.8.8.8.txt)
+2026-02-19T21:40:01Z [INFO] RUN: dig google.com @1.1.1.1
+2026-02-19T21:40:01Z [WARN] Command failed (10): dig google.com @1.1.1.1 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/dns_google_1.1.1.1.txt)
+2026-02-19T21:40:01Z [INFO] RUN: dig google.com @9.9.9.9
+2026-02-19T21:40:01Z [WARN] Command failed (10): dig google.com @9.9.9.9 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/dns_google_9.9.9.9.txt)
+2026-02-19T21:40:01Z [INFO] Module: ping
+2026-02-19T21:40:01Z [INFO] RUN: ping 8.8.8.8
+2026-02-19T21:40:26Z [WARN] Command failed (124): ping 8.8.8.8 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/ping_8.8.8.8.txt)
+2026-02-19T21:40:26Z [INFO] RUN: ping 1.1.1.1
+2026-02-19T21:40:51Z [WARN] Command failed (124): ping 1.1.1.1 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/ping_1.1.1.1.txt)
+2026-02-19T21:40:51Z [INFO] RUN: ping google.com
+2026-02-19T21:40:51Z [WARN] Command failed (68): ping google.com (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/ping_google.com.txt)
+2026-02-19T21:40:51Z [INFO] Module: traceroute
+2026-02-19T21:40:51Z [INFO] RUN: traceroute 8.8.8.8
+2026-02-19T21:40:51Z [WARN] Command failed (126): traceroute 8.8.8.8 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/traceroute_8.8.8.8.txt)
+2026-02-19T21:40:51Z [INFO] RUN: traceroute 1.1.1.1
+2026-02-19T21:40:51Z [WARN] Command failed (126): traceroute 1.1.1.1 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/traceroute_1.1.1.1.txt)
+2026-02-19T21:40:51Z [INFO] RUN: traceroute google.com
+2026-02-19T21:40:51Z [WARN] Command failed (126): traceroute google.com (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/traceroute_google.com.txt)
+2026-02-19T21:40:51Z [WARN] mtr not installed; skipping.
+2026-02-19T21:40:51Z [INFO] Module: jitter
+2026-02-19T21:40:51Z [INFO] RUN: jitter ping 8.8.8.8
+2026-02-19T21:41:16Z [WARN] Command failed (124): jitter ping 8.8.8.8 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/ping_jitter_8.8.8.8.txt)
+2026-02-19T21:41:16Z [INFO] Module: download
+2026-02-19T21:41:16Z [INFO] RUN: curl download test
+2026-02-19T21:41:16Z [WARN] Command failed (6): curl download test (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164000/raw/http_download.txt)
+2026-02-19T21:41:16Z [INFO] Module: speedtest
+2026-02-19T21:41:16Z [INFO] RUN: Ookla speedtest
+2026-02-19T21:41:21Z [INFO] iperf3 disabled.
+2026-02-19T21:41:21Z [INFO] Module: mtu

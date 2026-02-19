@@ -1,0 +1,11 @@
+Run ID: 20260219_165843
+Start UTC: 2026-02-19T22:00:29Z
+OS: macos
+Timeout cmd: gtimeout
+Enabled modules: all default
+Skipped modules: none
+Output dir: /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_165843
+
+Raw outputs: /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_165843/raw
+Metadata: /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_165843/meta
+PCAPs: /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_165843/pcap

@@ -1,0 +1,15 @@
+PING google.com (172.217.20.174): 56 data bytes
+64 bytes from 172.217.20.174: icmp_seq=0 ttl=110 time=147.267 ms
+64 bytes from 172.217.20.174: icmp_seq=1 ttl=110 time=180.126 ms
+64 bytes from 172.217.20.174: icmp_seq=2 ttl=110 time=369.174 ms
+64 bytes from 172.217.20.174: icmp_seq=3 ttl=110 time=233.712 ms
+64 bytes from 172.217.20.174: icmp_seq=4 ttl=110 time=178.821 ms
+64 bytes from 172.217.20.174: icmp_seq=5 ttl=110 time=206.091 ms
+64 bytes from 172.217.20.174: icmp_seq=6 ttl=110 time=230.220 ms
+64 bytes from 172.217.20.174: icmp_seq=7 ttl=110 time=139.546 ms
+64 bytes from 172.217.20.174: icmp_seq=8 ttl=110 time=253.456 ms
+64 bytes from 172.217.20.174: icmp_seq=9 ttl=110 time=149.471 ms
+
+--- google.com ping statistics ---
+10 packets transmitted, 10 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 139.546/208.788/369.174/65.287 ms

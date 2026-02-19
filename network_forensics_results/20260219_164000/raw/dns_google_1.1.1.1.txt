@@ -1,0 +1,2 @@
+/AppleInternal/Library/BuildRoots/4~B_wQugB79MmLoReDYQD47ixq1cWsroW1nQVzrcw/Library/Caches/com.apple.xbs/Sources/bind9/bind9/lib/isc/unix/socket.c:5580: bind: Operation not permitted
+dig: isc_socket_bind: unexpected error

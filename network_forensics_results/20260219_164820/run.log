@@ -1,0 +1,36 @@
+2026-02-19T21:48:20Z [INFO] Start network forensic run: 20260219_164820
+2026-02-19T21:48:20Z [INFO] Output directory: /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164820
+2026-02-19T21:48:20Z [INFO] Module: system
+2026-02-19T21:48:20Z [INFO] RUN: uname
+2026-02-19T21:48:20Z [INFO] RUN: sw_vers
+2026-02-19T21:48:20Z [INFO] RUN: sysctl hw
+2026-02-19T21:48:20Z [WARN] Command failed (1): sysctl hw (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164820/raw/sysctl_hw.txt)
+2026-02-19T21:48:20Z [INFO] Module: network
+2026-02-19T21:48:20Z [INFO] RUN: ifconfig -a
+2026-02-19T21:48:20Z [INFO] RUN: netstat -rn
+2026-02-19T21:48:20Z [INFO] RUN: scutil --dns
+2026-02-19T21:48:20Z [WARN] Command failed (1): scutil --dns (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164820/raw/scutil_dns.txt)
+2026-02-19T21:48:20Z [INFO] Module: dns
+2026-02-19T21:48:20Z [INFO] RUN: dig google.com @8.8.8.8
+2026-02-19T21:48:21Z [WARN] Command failed (10): dig google.com @8.8.8.8 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164820/raw/dns_google_8.8.8.8.txt)
+2026-02-19T21:48:21Z [INFO] RUN: dig google.com @1.1.1.1
+2026-02-19T21:48:21Z [WARN] Command failed (10): dig google.com @1.1.1.1 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164820/raw/dns_google_1.1.1.1.txt)
+2026-02-19T21:48:21Z [INFO] RUN: dig google.com @9.9.9.9
+2026-02-19T21:48:21Z [WARN] Command failed (10): dig google.com @9.9.9.9 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164820/raw/dns_google_9.9.9.9.txt)
+2026-02-19T21:48:24Z [WARN] ICMP not permitted; skipping ping/jitter/mtu modules. Re-run with sudo if needed.
+2026-02-19T21:48:24Z [WARN] Traceroute not permitted; skipping traceroute module. Re-run with sudo if needed.
+2026-02-19T21:48:24Z [WARN] mtr not installed; skipping.
+2026-02-19T21:48:24Z [WARN] ICMP not permitted; skipping ping/jitter/mtu modules. Re-run with sudo if needed.
+2026-02-19T21:48:24Z [INFO] Module: download
+2026-02-19T21:48:24Z [INFO] RUN: curl download test
+2026-02-19T21:48:24Z [WARN] Command failed (6): curl download test (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_164820/raw/http_download.txt)
+2026-02-19T21:48:24Z [INFO] Module: speedtest
+2026-02-19T21:48:24Z [INFO] RUN: Ookla speedtest
+2026-02-19T21:48:24Z [INFO] iperf3 disabled.
+2026-02-19T21:48:24Z [WARN] ICMP not permitted; skipping ping/jitter/mtu modules. Re-run with sudo if needed.
+2026-02-19T21:48:24Z [INFO] Port probe disabled or target not set.
+2026-02-19T21:48:24Z [INFO] Port scan disabled or target not set.
+2026-02-19T21:48:24Z [INFO] tcpdump capture disabled.
+2026-02-19T21:48:24Z [INFO] Module: whois
+2026-02-19T21:48:24Z [ERROR] Command failed (exit 126) at line 643: awk 'NR==2{print $2}'
+2026-02-19T21:48:24Z [ERROR] Command failed (exit 126) at line 630: hop=$(traceroute -m 5 8.8.8.8 2>/dev/null | awk 'NR==2{print $2}')

@@ -1,0 +1,46 @@
+2026-02-19T21:58:43Z [INFO] Start network forensic run: 20260219_165843
+2026-02-19T21:58:43Z [INFO] Output directory: /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_165843
+2026-02-19T21:58:43Z [INFO] Module: system
+2026-02-19T21:58:43Z [INFO] RUN: uname
+2026-02-19T21:58:43Z [INFO] RUN: sw_vers
+2026-02-19T21:58:43Z [INFO] RUN: sysctl hw
+2026-02-19T21:58:43Z [INFO] Module: network
+2026-02-19T21:58:43Z [INFO] RUN: ifconfig -a
+2026-02-19T21:58:43Z [INFO] RUN: netstat -rn
+2026-02-19T21:58:43Z [INFO] RUN: scutil --dns
+2026-02-19T21:58:43Z [INFO] Module: dns
+2026-02-19T21:58:43Z [INFO] RUN: dig google.com @8.8.8.8
+2026-02-19T21:58:43Z [INFO] RUN: dig google.com @1.1.1.1
+2026-02-19T21:58:43Z [INFO] RUN: dig google.com @9.9.9.9
+2026-02-19T21:58:43Z [INFO] Module: ping
+2026-02-19T21:58:43Z [INFO] RUN: ping 8.8.8.8
+2026-02-19T21:58:53Z [INFO] RUN: ping 1.1.1.1
+2026-02-19T21:59:02Z [INFO] RUN: ping google.com
+2026-02-19T21:59:11Z [INFO] Module: traceroute
+2026-02-19T21:59:11Z [INFO] RUN: traceroute 8.8.8.8
+2026-02-19T21:59:15Z [INFO] RUN: traceroute 1.1.1.1
+2026-02-19T21:59:18Z [INFO] RUN: traceroute google.com
+2026-02-19T21:59:43Z [WARN] Command failed (124): traceroute google.com (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_165843/raw/traceroute_google.com.txt)
+2026-02-19T21:59:43Z [WARN] mtr not installed; skipping.
+2026-02-19T21:59:43Z [INFO] Module: jitter
+2026-02-19T21:59:43Z [INFO] RUN: jitter ping 8.8.8.8
+2026-02-19T22:00:08Z [WARN] Command failed (124): jitter ping 8.8.8.8 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_165843/raw/ping_jitter_8.8.8.8.txt)
+2026-02-19T22:00:08Z [INFO] Module: download
+2026-02-19T22:00:08Z [INFO] RUN: curl download test
+2026-02-19T22:00:09Z [WARN] Command failed (60): curl download test (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_165843/raw/http_download.txt)
+2026-02-19T22:00:09Z [INFO] Module: speedtest
+2026-02-19T22:00:09Z [INFO] RUN: Ookla speedtest
+2026-02-19T22:00:10Z [INFO] iperf3 disabled.
+2026-02-19T22:00:10Z [INFO] Module: mtu
+2026-02-19T22:00:10Z [INFO] RUN: mtu ping 1472
+2026-02-19T22:00:23Z [WARN] Command failed (2): mtu ping 1472 (see /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_165843/raw/mtu_ping_1472.txt)
+2026-02-19T22:00:23Z [WARN] payload 1472 fails
+2026-02-19T22:00:23Z [INFO] RUN: mtu ping 1400
+2026-02-19T22:00:25Z [INFO] MTU OK for payload 1400
+2026-02-19T22:00:25Z [INFO] Port probe disabled or target not set.
+2026-02-19T22:00:25Z [INFO] Port scan disabled or target not set.
+2026-02-19T22:00:25Z [INFO] tcpdump capture disabled.
+2026-02-19T22:00:25Z [INFO] Module: whois
+2026-02-19T22:00:25Z [INFO] RUN: traceroute short
+2026-02-19T22:00:28Z [INFO] RUN: whois 192.168.80.1
+2026-02-19T22:00:29Z [INFO] All tests done. Outputs in /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_165843
