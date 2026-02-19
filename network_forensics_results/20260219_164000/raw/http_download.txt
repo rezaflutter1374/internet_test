@@ -1,1 +1,0 @@
-time_total=0.001327 time_connect=0.000000 speed_download=0

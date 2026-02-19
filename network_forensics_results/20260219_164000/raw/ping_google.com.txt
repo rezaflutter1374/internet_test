@@ -1,1 +1,0 @@
-ping: cannot resolve google.com: Unknown host

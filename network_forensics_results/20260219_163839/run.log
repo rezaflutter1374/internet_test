@@ -1,7 +1,0 @@
-2026-02-19T21:38:39Z [INFO] Start network forensic run: 20260219_163839
-2026-02-19T21:38:39Z [INFO] Output directory: /Users/rezaflutt/Documents/New project 2/network_forensics_results/20260219_163839
-2026-02-19T21:38:39Z [INFO] Module: system
-2026-02-19T21:38:39Z [INFO] RUN: uname
-2026-02-19T21:38:41Z [INFO] RUN: sw_vers
-2026-02-19T21:38:41Z [INFO] RUN: sysctl hw
-2026-02-19T21:38:41Z [ERROR] Command failed (exit 1) at line 172: "$TIMEOUT_CMD" "$CMD_TIMEOUT" "$@" > "$out" 2>&1

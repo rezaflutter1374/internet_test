@@ -1,8 +1,0 @@
-script: internet_autopsy_advanced.sh
-version: 2.0.0
-run_id: 20260219_172036
-start_time_utc: 2026-02-19T22:20:36Z
-user: root
-host: macbook-pro
-os_family: macos
-kernel: Darwin macbook-pro 25.1.0 Darwin Kernel Version 25.1.0: Mon Oct 20 19:34:03 PDT 2025; root:xnu-12377.41.6~2/RELEASE_ARM64_T8112 arm64
