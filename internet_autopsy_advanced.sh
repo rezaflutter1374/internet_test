@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # internet_autopsy_advanced.sh
 # Cross-platform (macOS + Linux) network diagnostic + evidence collection
-# Safe by default: advanced probes require explicit flags.
+
 
 set -Eeuo pipefail
 IFS=$'\n\t'
@@ -10,9 +10,7 @@ umask 077
 SCRIPT_NAME="$(basename "$0")"
 SCRIPT_VERSION="2.0.0"
 
-# -----------------------------
-# Defaults (override via flags)
-# -----------------------------
+
 BASE_OUTDIR="${HOME}/network_forensics_results"
 RUN_ID=""
 LOG_FILE=""
@@ -66,13 +64,9 @@ AVAILABLE_MODULES=(
 ENABLED_MODULES=()
 SKIP_MODULES=()
 
-# Runtime detection
 OS_FAMILY=""
 TIMEOUT_CMD=""
 
-# -----------------------------
-# Logging helpers
-# -----------------------------
 log() {
   local level="$1"; shift
   local msg="$*"
@@ -84,9 +78,7 @@ log_info() { log "INFO" "$*"; }
 log_warn() { log "WARN" "$*"; }
 log_error() { log "ERROR" "$*"; }
 
-# -----------------------------
-# Error handling
-# -----------------------------
+
 on_error() {
   local exit_code=$?
   local line_no=$1
@@ -96,9 +88,6 @@ on_error() {
 }
 trap 'on_error "$LINENO" "$BASH_COMMAND"' ERR
 
-# -----------------------------
-# Utility helpers
-# -----------------------------
 usage() {
   cat <<USAGE
 $SCRIPT_NAME v$SCRIPT_VERSION
@@ -191,7 +180,6 @@ detect_speedtest() {
     return 0
   fi
 
-  # Last resort: legacy speedtest (python-based) exposed as speedtest.
   if require_cmd speedtest; then
     SPEEDTEST_IMPL="legacy"
     return 0
@@ -279,7 +267,6 @@ run_cmd() {
   log_info "RUN: $label"
   ensure_dir "$(dirname "$out")"
 
-  # Temporarily disable ERR trap to allow non-zero exit codes without aborting.
   err_trap="$(trap -p ERR || true)"
   trap - ERR
 
@@ -303,9 +290,6 @@ run_cmd() {
   return 0
 }
 
-# -----------------------------
-# Platform detection
-# -----------------------------
 detect_os() {
   local uname_s
   uname_s="$(uname -s)"
@@ -326,9 +310,6 @@ detect_timeout() {
   fi
 }
 
-# -----------------------------
-# Initialization
-# -----------------------------
 init_output() {
   local ts
   ts="$(date +"%Y%m%d_%H%M%S")"
@@ -363,9 +344,6 @@ write_metadata() {
   } > "$meta"
 }
 
-# -----------------------------
-# Dependency check
-# -----------------------------
 check_dependencies() {
   local required=(ping traceroute curl)
   local optional=(ifconfig route scutil netstat mtr jq nmap tcpdump iperf3 speedtest speedtest-cli dig drill nslookup whois)
@@ -397,9 +375,7 @@ check_dependencies() {
   } > "$inv"
 }
 
-# -----------------------------
-# Modules
-# -----------------------------
+
 module_system() {
   module_enabled system || return 0
   log_info "Module: system"
@@ -714,9 +690,6 @@ write_summary() {
   } > "$SUMMARY_FILE"
 }
 
-# -----------------------------
-# Arg parsing
-# -----------------------------
 parse_args() {
   while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -766,9 +739,6 @@ parse_args() {
   done
 }
 
-# -----------------------------
-# Main
-# -----------------------------
 main() {
   parse_args "$@"
   detect_os
